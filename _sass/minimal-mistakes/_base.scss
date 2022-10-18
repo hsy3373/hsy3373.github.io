@@ -2,6 +2,10 @@
    BASE ELEMENTS
    ========================================================================== */
 
+*::before {
+  content: none !important;
+}
+
 html {
   /* sticky footer fix */
   position: relative;
