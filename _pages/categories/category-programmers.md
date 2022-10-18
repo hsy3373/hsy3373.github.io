@@ -1,6 +1,6 @@
 ---
 title: "프로그래머스"
-layout: archive
+layout: archive-test
 permalink: categories/Programmers
 author_profile: true
 sidebar_main: true

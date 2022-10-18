@@ -1,6 +1,6 @@
 ---
 title: "블로그"
-layout: archive
+layout: archive-test
 permalink: categories/Blog
 author_profile: true
 sidebar_main: true

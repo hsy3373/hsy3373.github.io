@@ -1,6 +1,6 @@
 ---
 title: "백준"
-layout: archive
+layout: archive-test
 permalink: categories/BaekJoon
 author_profile: true
 sidebar_main: true
