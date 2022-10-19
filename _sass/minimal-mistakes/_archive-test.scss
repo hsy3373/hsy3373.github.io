@@ -30,3 +30,61 @@
   border-bottom: 1px solid $border-color;
 }
 
+.post_pagination_div {
+  clear: both;
+  height: fit-content;
+  @include clearfix();
+  float: left;
+  margin-top: 2em;
+
+  @include breakpoint($large) {
+    float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+  }
+}
+
+/*
+   Social sharing
+   ========================================================================== */
+
+.page__share-test {
+  clear: both;
+  height: fit-content;
+  margin-top: 1em;
+  // padding-top: 1em;
+  .p{
+    margin: 0;
+
+  }
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share-title-test {
+  border-top: 1px solid $border-color;
+  margin-bottom: 0.4em;
+  padding-top: 1em;
+  // font-size: $type-size-6;
+  text-transform: uppercase;
+  height: fit-content;
+}
+  
+
+.comments-div{
+  clear: both;
+  height: fit-content;
+}

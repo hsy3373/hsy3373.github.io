@@ -66,27 +66,32 @@ layout: default
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       
-        <p style="margin-top: 3em;"></p>
-        <h4 class="page__meta-title"><span style="font-family:'Coming Soon'; color:#fcd14f;">{{ page.categories[0] }}</span> <span style="font-family:'Cafe24Oneprettynight';">카테고리 내 다른 글 보러가기</span></h4>
-        {% include post_pagination.html %}
-        <p></p>
-
       </section>
+    </div>
+  </article>
 
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4>{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% if page.share %}{% include social-share.html %}{% endif %}
-      </footer>
-
+  <div class="post_pagination_div">
+    <div class="position-test">
+    <!-- <p style="margin-top: 3em;"></p> -->
+    <h4 class="page__meta-title"><span style="font-family:'Coming Soon'; color:#fcd14f;">{{ page.categories[0] }}</span> <span style="font-family:'Cafe24Oneprettynight';">카테고리 내 다른 글 보러가기</span></h4>
+    {% include post_pagination.html %}
+    <p></p>
+    {% if site.data.ui-text[site.locale].meta_label %}
+    <h4>{{ site.data.ui-text[site.locale].meta_label }}</h4>
+    {% endif %}
+    {% if page.share %}{% include social-share-test.html %}{% endif %}
     </div>
 
-    {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
+    <div class="comments-div">
+      {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
       {% include comments.html %}
-    {% endif %}
+      {% endif %}
+    </div>
+    
+  </div>
+      
 
-  </article>
+
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
