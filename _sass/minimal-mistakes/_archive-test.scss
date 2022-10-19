@@ -103,3 +103,30 @@
   }
 }
 
+.single4-test{
+  margin: 0.2em 0 0 0.2em;
+}
+
+.single4-a{
+  margin: 0;
+  color: white;
+  font-size: $type-size-4;
+  font-family: $cafe;
+  font-weight: normal;
+}
+
+.archive-item-test {
+  position: relative;
+  margin-bottom: $type-size-6;
+
+  a {
+    position: relative;
+    z-index: 10;
+    font-size: $type-size-4;
+  }
+
+  a[rel="permalink"] {
+    position: static;
+  }
+
+}
