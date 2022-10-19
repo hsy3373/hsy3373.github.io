@@ -60,6 +60,10 @@
     margin: 0;
 
   }
+  .btn{
+    font-size: small;
+  }
+
   @include breakpoint(max-width $small) {
     .btn span {
       border: 0;
@@ -78,7 +82,7 @@
   border-top: 1px solid $border-color;
   margin-bottom: 0.4em;
   padding-top: 1em;
-  // font-size: $type-size-6;
+  font-size: smaller;
   text-transform: uppercase;
   height: fit-content;
 }
