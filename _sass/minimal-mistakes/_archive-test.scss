@@ -12,6 +12,10 @@
     width: calc(100% - #{$right-sidebar-width});
     // padding-right: $right-sidebar-width;
   }
+
+  .list__item{
+    margin-bottom: 0.4em;
+  }
 }
 
 .header-test{
@@ -91,4 +95,10 @@
 .comments-div{
   clear: both;
   height: fit-content;
+}
+
+.entries-list{
+  .list__item{
+    margin-bottom: 0.4em;
+  }
 }
