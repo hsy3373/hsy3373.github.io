@@ -82,10 +82,81 @@ URL을 `<>`로 감싸서 입력.
 
 <br>
 
-> 이미지에 링크 삽입
+> 이미지와 링크 연결
 
-`[![이미지설명(이미지 소스 URL)]](링크 URL)` 형식으로 입력
+`[![이미지설명](이미지 소스 URL)](링크 URL)` 형식으로 입력
+
+```
+[![이미지설명](http://www.google.com/images/logo.gif)](http://www.google.com/)
+
+```
+
+[![이미지설명](http://www.google.com/images/logo.gif)](http://www.google.com/)
+
+또는 참조 링크를 사용하여 이미지에 링크를 연결할 수 있다.
+
+```
+![이미지설명][logo_img]
+
+[![이미지설명][logo_img]][google_url]
+
+[logo_img]: http://www.google.com/images/logo.gif
+[google_url]: http://www.google.com/ "click to visit Google.com"
+```
+
+![이미지설명][logo_img]
+
+[![이미지설명][logo_img]][google_url]
+
+[logo_img]: http://www.google.com/images/logo.gif
+[google_url]: http://www.google.com/ "click to visit Google.com"
 
 <br>
 
 ## 2. 이미지 삽입
+
+> \!\[이미지 설명\]\(경로\)를 사용한다
+
+```
+![내 프로필 이미지](/assets/images/profile_400x400.jpg)
+```
+
+![내 프로필 이미지](/assets/images/profile_400x400.jpg)
+
+<br>
+
+> 이미지 속성 조정 방법
+
+HTML에서 사용하는 img 태그를 사용하여 속성 부여가 가능하다.
+
+```
+<img align="left" width="100" height="100" title="이미지 제목" alt="설명"  src="/assets/images/profile_400x400.jpg">
+```
+
+<img align="left" width="100" height="100" title="이미지 제목" alt="설명"  src="/assets/images/profile_400x400.jpg"><br>
+　<- 마우스 커서를 올려보세요
+
+<br>
+
+다만 이미지를 가운데로 두고 싶을 때는 \<p>태그로 감싸주어야 한다
+
+```
+<p align="center">
+  <img width="300" height="300" src="/assets/images/profile_400x400.jpg">
+</p>
+```
+
+<p align="center">
+  <img width="300" height="300" src="/assets/images/profile_400x400.jpg">
+</p>
+
+<br>
+
+> 이미지 경로
+
+이미지의 경로는 URL 주소와 상대경로를 사용하는 방법이 있다.  
+URL 경로의 경우 github에 업로드 하여 그 이미지 주소를 따오는 방법이 있고  
+상대경로를 사용할 경우 위에서 예시로 썼던 것과 같이 경로를 지정해주어 끌어오는 방법이 있다.
+
+만약 github 웹 주소로 이미지 삽입이 제대로 안된다면 raw=true를 붙여 사용해야 한다.  
+이와 관련된 [참고 링크(클릭)](https://www.javaer101.com/ko/article/9737552.html)
