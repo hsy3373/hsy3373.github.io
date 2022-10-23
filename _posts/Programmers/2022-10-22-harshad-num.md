@@ -19,11 +19,11 @@ last_modified_at: 2020-10-22
   <img width="calc(100% - #{$right-sidebar-width-narrow})" height="auto" src="/assets/images/programmers/harshad.PNG">
 </p>
 
-> ## 처음 풀이
+> ## 내 풀이
 
 -> 받은 int값을 String 형태로 변환  
--> split("")으로 공백 단위로 분할하여 배열로 저장
--> for문으로 배열안의 값들을 돌리며 다시 int형으로 변환 및 총합 도출
+-> split("")으로 공백 단위로 분할하여 배열로 저장  
+-> for문으로 배열안의 값들을 돌리며 다시 int형으로 변환 및 총합 도출  
 -> 총합과 기존 값을 비교하여 true/false 값 반환
 
 <details class="no-arrow" markdown="1">
