@@ -3,7 +3,7 @@ title: "Java 문법 3. Control statement(제어문)"
 excerpt: "Java 제어문의 이해"
 
 categories:
-  - Java
+  - JavaGrammar
 tags:
   - [Java, grammar]
 
