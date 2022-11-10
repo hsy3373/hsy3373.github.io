@@ -1,5 +1,5 @@
 ---
-title: "Java 문법"
+title: "JavaGrammar"
 layout: archive-test
 permalink: categories/JavaGrammar
 author_profile: true
