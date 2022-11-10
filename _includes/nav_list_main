@@ -48,8 +48,8 @@
         </ul>
         <ul>
             {% for category in site.categories %}
-                {% if category[0] == "JavaGremmar" %}
-                    <li><a href="/categories/JavaGremmar" class="">JAVA 문법 ({{category[1].size}})</a></li>
+                {% if category[0] == "JavaGrammar" %}
+                    <li><a href="/categories/JavaGrammar" class="">JAVA 문법 ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
