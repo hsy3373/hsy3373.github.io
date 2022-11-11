@@ -157,9 +157,8 @@ do {
 
 <br>
 
-#### [ 점프 break, continue ]
+#### [ 점프(Labeled) break, continue ]
 
-- Labeled break, continue 라고도 한다
 - for, while, do-while 문에 사용할 수 있다
 - 한번에 여러 단계의 중첩 반복문을 빠져나가게 할 때 이용할 수 있다
 - break 와 continue 가 한 개의 반복문만 탈출하는 특성을 보완하기 위해 나온 구문
