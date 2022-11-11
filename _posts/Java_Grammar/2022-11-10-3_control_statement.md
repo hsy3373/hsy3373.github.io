@@ -17,8 +17,6 @@ last_modified_at: 2020-11-10
 
 ## Control Statement(제어문)
 
-<br>
-
 > ### 1. 조건문
 
 조건을 달아 선택적으로 실행시키고자 할 때 사용하는 제어문
