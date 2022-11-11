@@ -2,6 +2,19 @@
    TABLES
    ========================================================================== */
 
+/*
+border-color:black;
+border-style:solid;
+border-width:1px;
+font-family:Arial, sans-serif;
+font-size:14px;
+  
+overflow:hidden;
+padding:10px 5px;
+word-break:normal;
+
+*/
+
 table {
   margin-bottom: 1em;
   width: 100%;
@@ -9,6 +22,9 @@ table {
   font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
+  
+  text-align:center;
+  vertical-align:middle
 
   & + table {
     margin-top: 1em;
