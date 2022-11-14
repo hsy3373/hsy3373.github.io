@@ -5,7 +5,7 @@ excerpt: "Java 제어문의 이해"
 categories:
   - JavaGrammar
 tags:
-  - [Java, java-grammar]
+  - [Java, Grammar]
 
 comments: true
 toc: true
