@@ -189,12 +189,12 @@ hr {
 /* lists */
 ul li,
 ol li {
-  margin-bottom: 0.7em;
+  margin-bottom: $type-size-6;
 }
 
 li ul,
 li ol {
-  margin-top: 0.5em;
+  margin-top: 0.3em;
 }
 
 /*
