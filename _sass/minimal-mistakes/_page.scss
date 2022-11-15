@@ -117,8 +117,10 @@ body {
     font-size: 1em;
   }
 
-  li p {
+  li {
+    p {
     margin: 0 0 $type-size-8;
+    }
   }
 
   /* paragraph indents */
