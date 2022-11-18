@@ -187,9 +187,15 @@ hr {
 }
 
 /* lists */
+
+
+li ul li {
+  margin-bottom: $type-size-6;
+}
+
 ul li,
 ol li {
-  margin-bottom: $type-size-6;
+  margin-bottom: $type-size-5;
 }
 
 li ul,
