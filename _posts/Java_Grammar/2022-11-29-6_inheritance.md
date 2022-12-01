@@ -1,6 +1,6 @@
 ---
-title: "Java 문법 6. 상속 (inheritance)과 다형성 (polymorphism)"
-excerpt: "Java 상속과 다형성의 이해"
+title: "Java 문법 6. 상속 (inheritance)"
+excerpt: "Java 상속의 이해"
 
 categories:
   - JavaGrammar
@@ -75,7 +75,7 @@ public class Academy extends Company {}
   - 부모 생성자를 호출하는 메소드이다
   - 기본적으로 후손 생성자에 부모 생성자가 포함되어있다
   - 후손 객체 생성시에는 부모부터 생성이 되기 때문에 후손 클래스 생성자 안에는 부모 생성자를 호출하는 super()가 첫줄에 존재한다  
-    -> 부모 생성자가 가장 먼저 실행되어야하기 때문에 명시적으로 작성시에도 반드시 <u>첫 줄에<u> 작성해야 한다
+    -> 부모 생성자가 가장 먼저 실행되어야하기 때문에 명시적으로 작성시에도 반드시 <u>첫 줄에</u> 작성해야 한다  
     -> 매개변수가 있는 부모 생성자 호출은 `super(매개변수...)`를 넣어서 사용한다
 
 - `super` 레퍼런스
