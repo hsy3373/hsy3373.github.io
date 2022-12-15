@@ -1,11 +1,11 @@
 ---
-title: "[Oracle] SQL문법 1.SQL 기본문법"
-excerpt: "SELECT 등 Oracle SQL 기본 문법"
+title: "[Oracle][SQL] Oracle SQL문법 1.SQL과 DML(Data Manipulation Language) - 기본문법  "
+excerpt: "SELECT 등 DML 기본 문법"
 
 categories:
   - Oracle
 tags:
-  - [Oracle, SQL]
+  - [Oracle, SQL, DML]
 
 comments: true
 toc: true
@@ -160,78 +160,3 @@ last_modified_at: 2020-12-15
 | 날짜 - 숫자    | DATE      | 날짜에서 숫자만큼 며칠 전 |
 | 날짜 - 날짜    | NUMBER    | 두 날짜의 일수 차         |
 | 날짜 + 숫자/24 | DATE      | 날짜 + 시간               |
-
-<br>
-
-> ### SELECT
-
-- 데이터를 조회한 결과를 Result Set이라고 하는데 SELECT구문에 의해 반환된 행들의 집합을 의미한다
-- Result Set은 0개 이상의 행이 포함될 수 있고 특정 기준에 의해 정렬 가능하다
-- 한 테이블의 특정 컬럼, 행, 행/컬럼 또는 여러 테이블의 특정 행/컬럼 조회가 가능하다
-
-<br>
-
-#### [ 표현법 ]
-
-```sql
-SELECT 컬럼 명 [, 컬럼명, …]
-FROM 테이블 명
-WHERE 조건식;
-
-```
-
-- SELECT
-
-  - 조회하고자 하는 컬럼명을 기술한다
-  - 여러 컬럼을 조회하는경우 쉼표로 구분하며 전체 컬럼 조회는 쉼표 대신 \* 기호를 사용한다
-  - 조회 결과는 기술한 컬럼 명 순으로 나열된다
-
-- FROM
-
-  - 조회 대상 컬럼이 포함된 테이블명을 기술한다
-
-- WHERE
-
-  - 행을 선택하는 조건을 기술한다
-  - 여러개의 제한 조건을 걸 수 있으며 각각 논리 연산자로 연결시킨다
-  - 제한 조건을 만족시키는 행들만 Result Set에 포함된다
-
-<br>
-
-#### [ 활용 ]
-
-- 컬럼 값 산술 연산
-
-  ```sql
-  SELECT EMP_NAME, SALARY * 12, (SALARY + (SALARY*BONUS)) * 12
-  ```
-
-  - 컬럼 값에 대해 산술 연산 기술 및 조회도 가능하다
-
-- 컬럼 별칭
-
-  ```sql
-  SELECT EMP_NAME AS 이름, SALARY*12 "연봉(원)"
-  ```
-
-  - 컬럼의 별칭을 지을 수 있다
-  - AS 별칭, "별칭", 별칭, AS "별칭" 의 형식으로 컬럼명 뒤에 기술하여 별칭을 짓는다  
-    => AS와 쌍따옴표는 생략 가능 (공백으로 구분)
-    => 숫자/특수문자가 포함되는 경우에는 꼭 쌍따옴표를 사용해야 한다
-    => SQL에서 홀따옴표와 쌍따옴표는 기능이 다르니 주의할 것, 꼭 쌍따옴표로 표기해야 한다
-
-- 리터럴
-
-  ```sql
-  SELECT EMP_ID, SALARY, '원' AS 단위
-  ```
-
-  - 임의로 지정한 문자열을 기술하면 테이블에 존재하는 데이터처럼 활용이 가능하다
-  - 문자나 날짜 리터럴을 '' 기호를 사용한다
-  - 리터럴은 Result Set의 모든 행에 동일한 내용(위에서 임의로 기술한 문자열 그대로)으로 반복 표시된다
-
-- DISTINCT
-  ```sql
-  SELECT DISTINCT JOB_CODE
-  ```
-  - 컬럼에 포함된 데이터 중 중복값을 제외하고 동일데이터는 1회만 표시한다
