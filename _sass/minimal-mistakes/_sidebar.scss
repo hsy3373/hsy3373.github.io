@@ -37,7 +37,7 @@
   }
 
   @include breakpoint($x-large) {
-    width: calc(250px - 1em);
+    width: calc(#{$right-sidebar-width-test} - 1em);
   }
 
   > * {
