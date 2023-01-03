@@ -11,8 +11,8 @@ comments: true
 toc: true
 toc_sticky: true
 
-date: 2020-12-22
-last_modified_at: 2020-12-22
+date: 2022-12-22
+last_modified_at: 2022-12-22
 ---
 
 ## DML (DATA MANIPULATION LANGUAGE)

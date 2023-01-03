@@ -11,8 +11,8 @@ comments: true
 toc: true
 toc_sticky: true
 
-date: 2020-12-01
-last_modified_at: 2020-12-05
+date: 2022-12-01
+last_modified_at: 2022-12-05
 ---
 
 ## 추상클래스(Abstract class)

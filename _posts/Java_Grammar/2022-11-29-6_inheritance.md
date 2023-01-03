@@ -11,8 +11,8 @@ comments: true
 toc: true
 toc_sticky: true
 
-date: 2020-11-29
-last_modified_at: 2020-12-04
+date: 2022-11-29
+last_modified_at: 2022-12-04
 ---
 
 ## 상속 (inheritance)
