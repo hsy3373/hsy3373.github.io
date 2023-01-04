@@ -72,3 +72,5 @@ for (int[] card : sizes) {
 </details>
 
 <br>
+
+<p>
