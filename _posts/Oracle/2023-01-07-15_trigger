@@ -1,0 +1,149 @@
+---
+title: "[Oracle] SQL문법 15. TRIGGER 기본문법 "
+excerpt: "TRIGGER 기본 문법"
+
+categories:
+  - Oracle
+tags:
+  - [Oracle, SQL]
+
+comments: true
+toc: true
+toc_sticky: true
+
+date: 2023-01-07
+last_modified_at: 2023-01-08
+---
+
+## TRIGGER
+
+테이블이나 뷰가 INSERT, UPDATE, DELETE 등의 DML문에 의해 변경될 경우 <u>자동으로 실행</u>될 내용을 정의하여 저장하는 객체이다  
+트리거의 주요 사용 목적으로는 테이블 데이터의 무결성 보장, 데이터베이스 관리의 자동화 등이라고 할 수 있다
+
+<br>
+
+> ### 특징
+
+- 자동으로 실행되며 수동으로는 실행할 수 없다
+- 데이터 관리를 자동화 할 수 있다(장점이자 단점)
+- 어떤 동작에서 실행되는지 지정해주어야 한다
+- 트랜잭션의 일부로 처리되므로 COMMIT, ROLLBACK, SAVEPOINT문장을 포함할 수 없다
+- 테이블과는 별도로 DATABASE에 저장된다
+- 뷰에 대해서가 아니라 테이블에 관해서만 정의될 수 있다
+- SQL의 제약조건 방법을 통해 명시할 수 없는 무결성 제약조건을 구현사고, 관련 테이블의 데이터를 일치시킬 때 주로 사용된다
+- 사용 예시 : 입출고에 대한 데이터가 기록(INSERT)될 때마다 해당 상품에 대한 재고 수량을 매번 수정(UPDATE)해야 할 때 등
+
+<br>
+
+#### 단점
+
+- 빈번한 데이터의 변경 시 그에따라 TRIGGER 또한 함께 실행되므로 성능상 좋지 못하다
+- 관리적 측면에서 형상관리가 <u>불가능</u>하기 때문에 관리에 불편하다  
+  => JAVA 등 기타 언어파일에서도 데이터를 변경하는하지만 해당 파일에서는 트리거가 존재하는지 알수가 없다  
+  => 어딘가 문제가 생길 경우 어디서 문제가 발생한 것인지 정확히 파악하기가 어려움
+- 트리거를 남용하게 되면 예상치 못한 사태가 발생할 수 있으며 유지보수가 어려워 질 수 있다
+- JAVA 등에서 트리거와 비슷하게 블럭을 묶어 구동되도록 로직을 짤 수 있기 때문에 많이 사용되지 않는 추세이다
+
+<br>
+
+> ### 트리거의 종류
+
+- SQL문의 시행 시기에 따른 분류
+
+  - BEFORE TRIGGER
+    - 지정한 테이블에 이벤트(DML)가 발생되기 전에 트리거를 실행할 때
+  - AFTER TRIGGER
+    - 지정한 테이블에 이벤트(DML)가 발생된 후에 트리거를 실행할 때
+
+- SQL문에 의해 영향을 받는 각 행에 따른 분류
+  - STATEMENT TRIGGER (문장 트리거)
+    - 이벤트가 발생한 SQL문에 대해 딱 한 번만 트리거를 실행할 때
+    - 성능상 행 트리거보다 우수한 면이 있다
+    - ROW TRIGGER (행 트리거)
+      - 지정 SQL문이 실행될 때마다 매번 트리거를 실행할 때
+      - FOR EACH ROW 옵션을 기술하여 사용한다
+      - 문장 트리거보다 더 많이 쓰인다
+      - 컬럼의 데이터행에 변화가 오면 변경 후의 행은 OLD와 NEW를 통해 가져올 수 있다
+      - OLD와 NEW는 각각 사용가능한 경우가 다르므로 사용시 주의가 필요하다
+      - 대표적인 OLD사용 경우 : BEFORE UPDATE , BEFORE DELETE
+      - 대표적인 NEW사용 경우 : AFTER INSERT , AFTER UPDATE
+
+<br>
+
+> ### 트리거의 선언
+
+```sql
+[표현식]
+CREATE [OR REPLACE] TRIGGER 트리거명
+택1(BEFORE|AFTER) 택1(INSERT|DELETE|UPDATE) ON 테이블명
+[REFERENCING 택1(NEW|OLD) TABLE AS 테이블명]
+[FOR EACH ROW]
+[WHEN 조건식]
+BODY문(일반 PL/SQL문 형식으로 작성)
+
+-- BODY문 예시
+[DECLARE
+  변수선언;]
+BEGIN
+  위에서 지정한 이벤트 발생 시 자동 실행할 내용
+[EXCEPTION]
+END;
+/
+```
+
+- \[ ]는 생략 가능하다
+- BEFORE, AFTER 중 하나를 선택하여 기입한다
+  - BEFORE : 테이블이 변경되기 전에 트리거가 실행되는 옵션
+  - AFTER : 테이블이 변경된 후에 트리거가 실행되는 옵션
+- INSERT, DELETE, UPDATE 중 하나를 선택하여 기입한다
+  - 기입한 이벤트가 발생할 때 트리거를 실행시키게 된다
+- NEW : 새로 추가되거나 변경된 후의 값에 트리거가 적용된다  
+  => INSERT - 입력할 값, UPDATE - 수정할 값
+- OLD : 변경 전의 값에 트리거가 적용된다  
+  => UPDATE - 수정 전 값, DELETE - 삭제할 값
+- WHEN : 트리거가 실행되면서 지켜야 할 조건을 지정한다  
+  => 해당 조건식에 맞는 데이터에만 트리거가 실행되게 된다
+- BODY문 : 트리거의 본문 코드를 입력하는 구간으로 일반 PL/SQL문 형식(BEGIN~END)으로 작성한다  
+  => 적어도 하나 이상의 <u>SQL문이 있어야만 한다</u>  
+  => 변수에 값을 치환할 경우에는 예약어 SET을 사용하도록한다
+
+<br>
+
+- 트리거 활용예시
+
+  ```sql
+  -- 상품 재고관리 테이블의 데이터 변경에 따른 트리거 활용 예시
+  /*
+  TB_PRODUCT : 상품의 종류 정보와 현재 재고수량을 담는 테이블로, PK로 상품코드(PCODE) 컬럼을 가진다
+              총 컬럼 종류 : PCODE(상품코드:PK), STOCK(상품수량)
+  TB_STOCK : 상품의 입,출고 발생이력과 그 후 남은 상품의 재고 갯수 정보를 담는 테이블로,
+              외래키로 TB_PRODUCT의 PCODE(상품코드)를 참조하는 PCODE 컬럼을 가진다
+              총 컬럼 종류 : PCODE(상품코드:FK), STATUS(입,출고 상태), AMOUNT(입,출고 수량)
+  */
+  CREATE OR REPLACE TRIGGER TRG_STOCK
+  AFTER INSERT ON TB_STOCK
+  FOR EACH ROW
+  BEGIN
+    -- 상품이 입고된 경우 재고 수량을 증가시킨다
+    IF (:NEW.STATUS = '입고')
+      THEN
+      UPDATE TB_PRODUCT
+      SET STOCK = STOCK + :NEW.AMOUNT
+      WHERE PCODE = :NEW.PCODE;
+    ELSE
+      -- 상품이 출고된 경우 재고 수량을 감소시킨다
+      UPDATE TB_PRODUCT
+      SET STOCK = STOCK - :NEW.AMOUNT
+      WHERE PCODE = :NEW.PCODE;
+    END IF;
+  END;
+  /
+
+  -- TRG_STOCK 사용 예시
+  INSERT INTO TB_STOCK VALUES(21041, 7 , '출고');
+  /* 트리거는 수동으로 실행할 수 없으므로 트리거 생성시 정의한 대로
+  테이블 상 INSERT 이벤트가 일어날때마다 자동으로 실행된다 */
+  /* 위 예시에서는 21041이라는 상품코드에 7개의 출고 이벤트를 준 것으로
+  이후 TB_PRODUCT 테이블을 조회하면 21041이라는 상품의 STOCK 컬럼에서
+  원래 수량에서 7개만큼 줄어들어 있는 것을 확인 가능할 것이다 */
+  ```
