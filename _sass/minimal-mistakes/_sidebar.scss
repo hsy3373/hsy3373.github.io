@@ -17,6 +17,7 @@
   // }
 
   @include breakpoint($large) {
+    padding-right: 10px;
     float: left;
     width: calc(#{$right-sidebar-width-test} - 1em);
     opacity: 0.75;
