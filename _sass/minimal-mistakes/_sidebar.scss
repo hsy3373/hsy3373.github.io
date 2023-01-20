@@ -18,7 +18,7 @@
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    width: calc(#{$right-sidebar-width-test} - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -34,10 +34,6 @@
       */
       max-height: calc(100vh - #{$nav-height} - 2em);
     }
-  }
-
-  @include breakpoint($x-large) {
-    width: calc(#{$right-sidebar-width-test} - 1em);
   }
 
   > * {
@@ -220,7 +216,7 @@
 
     &:before {
       @supports (pointer-events: none) {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -354,4 +350,3 @@
     margin-right: initial;
   }
 }
-
