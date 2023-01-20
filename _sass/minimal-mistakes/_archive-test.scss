@@ -4,7 +4,7 @@
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    width: calc(100% - #{$right-sidebar-width-test});
     // padding-right: $right-sidebar-width-narrow;
   }
 
@@ -13,24 +13,20 @@
     // padding-right: $right-sidebar-width;
   }
 
-  .list__item{
+  .list__item {
     margin-bottom: 0.4em;
   }
 }
 
-.header-test{
+.header-test {
   margin-top: 0.8em;
   margin-bottom: 0.8em;
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    width: calc(100% - #{$right-sidebar-width-test});
     // padding-right: $right-sidebar-width-narrow;
   }
 
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width-test});
-    // padding-right: $right-sidebar-width;
-  }
   border-bottom: 1px solid $border-color;
 }
 
@@ -42,16 +38,12 @@
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-  }
-
-  @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width-test});
   }
+
   @include breakpoint(max-width $large) {
     width: calc(100%);
   }
-
 }
 
 /*
@@ -63,11 +55,10 @@
   height: fit-content;
   margin-top: 1em;
   // padding-top: 1em;
-  .p{
+  .p {
     margin: 0;
-
   }
-  .btn{
+  .btn {
     font-size: small;
   }
 
@@ -93,24 +84,23 @@
   text-transform: uppercase;
   height: fit-content;
 }
-  
 
-.comments-div{
+.comments-div {
   clear: both;
   height: fit-content;
 }
 
-.entries-list{
-  .list__item{
+.entries-list {
+  .list__item {
     margin-bottom: 0.4em;
   }
 }
 
-.single4-test{
+.single4-test {
   margin: 0.2em 0 0 0.2em;
 }
 
-.single4-a{
+.single4-a {
   margin: 0;
   color: white;
   font-size: $type-size-4;
@@ -131,18 +121,16 @@
   a[rel="permalink"] {
     position: static;
   }
-
 }
 
-
-.no-arrow{
-  summary::marker{
+.no-arrow {
+  summary::marker {
     font-size: 0;
   }
 
-  summary{
+  summary {
     text-align: center;
-    background-color:  #5e6f95;
+    background-color: #5e6f95;
     color: black;
     font-weight: bolder;
     border-radius: 4px;
