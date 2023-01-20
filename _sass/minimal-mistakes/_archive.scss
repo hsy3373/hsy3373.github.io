@@ -12,10 +12,10 @@
     padding-right: $right-sidebar-width-narrow;
   }
 
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
-  }
+  // @include breakpoint($x-large) {
+  //   width: calc(100% - #{$right-sidebar-width});
+  //   padding-right: $right-sidebar-width;
+  // }
 }
 
 .archive__item {
@@ -29,7 +29,6 @@
   a[rel="permalink"] {
     position: static;
   }
-
 }
 
 .archive__subtitle {
@@ -53,7 +52,7 @@
   font-weight: normal;
 
   a[rel="permalink"]::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -287,7 +286,7 @@
   }
 
   a.btn::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -313,7 +312,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -354,7 +353,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -398,7 +397,7 @@
     }
 
     a.btn::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
@@ -444,7 +443,7 @@
    Wide Pages
    ========================================================================== */
 
-  .wide {
+.wide {
   .archive {
     @include breakpoint($large) {
       padding-right: 0;
@@ -459,7 +458,7 @@
 /* Place inside a single layout */
 
 .layout--single {
-	.feature__wrapper {
-		display: inline-block;
-	}
+  .feature__wrapper {
+    display: inline-block;
+  }
 }
