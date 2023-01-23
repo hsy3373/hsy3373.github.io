@@ -70,18 +70,15 @@
         </ul>
         <span class="nav__sub-title">web</span>
         <ul>
+            {% assign web = 0 %}
             {% for category in site.categories %}
-                {% if category[0] == "HTML" %}
-                    <li><a href="/categories/HTML" class="">HTML ({{category[1].size}})</a></li>
-                {% endif %}
+                {% if category[0] == "HTML" or category[0] == "CSS"  %}
+                    {% assign web = web | plus: category[1].size %}
+                {% endif  %}
             {% endfor %}
-        </ul>
-        <ul>
-            {% for category in site.categories %}
-                {% if category[0] == "CSS" %}
-                    <li><a href="/categories/CSS" class="">CSS ({{category[1].size}})</a></li>
-                {% endif %}
-            {% endfor %}
+            {% if web > 0 %}
+                <li><a href="/categories/WEB" class="">HTML/CSS ({{web}})</a></li>
+            {% endif %}
         </ul>
         <ul>
             {% for category in site.categories %}
