@@ -21,7 +21,7 @@ title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
 name: "gom's"
 description: "공부 블로그"
-url: "https://hsy3373.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: "https://hsy3373.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "hsy3373/blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -73,7 +73,8 @@ google:
   search_engine_id: # YOUR_SEARCH_ENGINE_ID
   instant_search: # false (default), true
 # SEO Related
-google_site_verification: "BYKfLxIfart8UHVUV4Dq_nCwggVgY49nVM1maQ3JErI"
+google_site_verification: "YNV_wc1dK_7XwxixO_Odx3XKPh_ZnV1r2l-xvcwSXSc"
+# google-site-verification: "BYKfLxIfart8UHVUV4Dq_nCwggVgY49nVM1maQ3JErI"
 
 safe: true #사이트맵 추가용
 
