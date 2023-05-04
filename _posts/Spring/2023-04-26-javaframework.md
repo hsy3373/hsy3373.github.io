@@ -1,18 +1,18 @@
 ---
-title: "[Spring Framework] JAVA Framework 종류"
-excerpt: "Framework의 종류와 Spring"
+title: "[JAVA Framework] JAVA Framework와 Spring"
+excerpt: "Framework의 종류와 Spring 이해"
 
 categories:
   - Spring
 tags:
-  - [Spring, Framework]
+  - [Spring, Java-Framework]
 
 comments: true
 toc: true
 toc_sticky: true
 
 date: 2023-04-26
-last_modified_at: 2023-04-26
+last_modified_at: 2023-05-04
 ---
 
 ## Framework
@@ -78,7 +78,7 @@ Spring 공식 사이트 : [https://spring.io](https://spring.io)
 > ### Spring 구성 모듈
 
 <p align="center">
-  <img width="calc(100% - #{$right-sidebar-width-narrow})" height="auto" src="/assets/images/springFramework.png">
+  <img width="calc(100% - #{$right-sidebar-width-narrow})" height="auto" src="/assets/images/spring/springFramework.png">
 </p>
 
 - Data 접근 계층
@@ -97,21 +97,24 @@ Spring 공식 사이트 : [https://spring.io](https://spring.io)
   - 별도의 proxy를 두어 동작, 이를 통해 객체간의 결합도를 낮출 수 있음
 
 - Core Container
+
   - Spring 핵심 부분이라고 할 수 있으며 모든 스프링 관련 모듈은 이 Core Container 기반으로 구축
   - Spring의 근간이 되는 IoC(또는 DI) 기능을 지원하는 영역 담당
   - BeanFactory를 기반으로 Bean클래스들을 제어할 수 있는 기능 지원
 
-| 모듈 명                | 내용                                                     |
-| ---------------------- | -------------------------------------------------------- |
-| spring-beans           | 스프링 컨테이너를 이용해서 객체를 생성하는 기본기능 제공 |
-| spring-context         | 객체                                                     |
-| spring-aop             |                                                          |
-| spring-web             |                                                          |
-| spring-webmvc          |                                                          |
-| spring-websocket       |                                                          |
-| spring-oxm             |                                                          |
-| spring-tx              |                                                          |
-| spring-jdbc            |                                                          |
-| spring-orm             |                                                          |
-| spring-jms             |                                                          |
-| spring-context-support |                                                          |
+- 기타 모듈
+
+  | 모듈 명                | 내용                                                                                              |
+  | ---------------------- | ------------------------------------------------------------------------------------------------- |
+  | spring-beans           | 스프링 컨테이너를 이용해서 객체를 생성하는 기본기능 제공                                          |
+  | spring-context         | 객체 생성, 라이프 사이클 처리, 스키마 확장 등의 기능 제공                                         |
+  | spring-aop             | AOP 기능 제공                                                                                     |
+  | spring-web             | REST클라이언트 데이터 변환 처리, 서블릿 필터, 파일 업로드 지원 등 웹 개발에 필요한 기반 기능 제공 |
+  | spring-webmvc          | 스프링 기반의 MVC 프레임워크, 웹 애플리케이션을 개발하는데 필요한 컨트롤러, 뷰 구현 제공          |
+  | spring-websocket       | 스프링 MVC에서 웹 소켓 연동을 처리할 수 있도록 제공                                               |
+  | spring-oxm             | XML과 자바 객체 간의 매핑을 처리하기 위한 API 제공                                                |
+  | spring-tx              | 트랜잭션 처리를 위한 추상 레이어 제공                                                             |
+  | spring-jdbc            | JDBC프로그래밍을 보다 쉽게 할 수 있는 템플릿 제공                                                 |
+  | spring-orm             | Hibernate, JPA, MyBatis 등과의 연동 지원                                                          |
+  | spring-jms             | JMS서버와 메시지를 쉽게 주고 받을 수 있도록 하기 위한 템플릿                                      |
+  | spring-context-support | 스케줄링, 메일발송, 캐시연동, 벨로시티 등 부가기능제공                                            |
