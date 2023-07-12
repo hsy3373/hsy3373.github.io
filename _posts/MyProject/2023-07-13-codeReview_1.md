@@ -1,6 +1,6 @@
 ---
 title: "[Code Review] Project Code Review - 1"
-excerpt: "Framework의 종류와 Spring 이해"
+excerpt: "프로젝트 Code Review"
 
 categories:
   - Project

@@ -1,10 +1,10 @@
 ---
-title: "Project"
+title: "MyProject"
 layout: archive-test
-permalink: categories/Project
+permalink: categories/MyProject
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.Project %}
+{% assign posts = site.categories.MyProject %}
 {% for post in posts %} {% include archive-single4.html type=page.entries_layout %} {% endfor %}
