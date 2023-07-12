@@ -22,15 +22,15 @@ last_modified_at: 2023-07-13
 자유롭게 멘토를 선택하여 코드 리뷰를 요청하고 응답 받을 수 있는 플랫폼을 기획  
 반응형 웹페이지와 AWS를 통한 배포까지를 목표로 함
 
-<a href="https://docs.google.com/spreadsheets/d/1AVsYmQw9CeW6j1WlSwJGeKoM9TVOWVCt3fK4NPtPZIA/edit#gid=1464759547" target="_blank">기획서(바로가기)</a>
-
-사용 기술 스택 : Spring, MySql, React, Nextjs
+- <a href="https://docs.google.com/spreadsheets/d/1AVsYmQw9CeW6j1WlSwJGeKoM9TVOWVCt3fK4NPtPZIA/edit#gid=1464759547" target="_blank">기획서(바로가기)</a>
+- 사용 기술 스택 : Spring, MySql, React, Nextjs
+- 팀원 : 이상민, 한승은
 
 <br>
 
 > ### 회의록
 
-#### 1회차(7/9)
+#### [ 1회차(7/9) ]
 
 - **참석자** : 이상민, 한승은
 
@@ -66,7 +66,7 @@ last_modified_at: 2023-07-13
 
   <br>
 
-#### 2회차(7/10)
+#### [ 2회차(7/10) ]
 
 - **참석자** : 이상민, 한승은
 
@@ -94,7 +94,7 @@ last_modified_at: 2023-07-13
 
   <br>
 
-#### 3회차(7/13)
+#### [ 3회차(7/13) ]
 
 - **참석자** : 이상민, 한승은
 
