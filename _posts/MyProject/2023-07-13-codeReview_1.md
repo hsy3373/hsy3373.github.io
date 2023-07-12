@@ -3,7 +3,7 @@ title: "[Code Review] Project Code Review - 1"
 excerpt: "프로젝트 Code Review"
 
 categories:
-  - Project
+  - MyProject
 tags:
   - [Project, Spring]
 

@@ -3,7 +3,7 @@ title: "[Opeaceful] Project Opeaceful"
 excerpt: "프로젝트 Opeaceful"
 
 categories:
-  - Project
+  - MyProject
 tags:
   - [Project, Spring]
 
