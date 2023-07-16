@@ -1,6 +1,6 @@
 ---
-title: "[Code Review] Project Code Review"
-excerpt: "프로젝트 Code Review"
+title: "[Code Review] Project Code Review - 소개/회의록"
+excerpt: "프로젝트 Code Review 소개 및 회의록"
 
 categories:
   - MyProject
