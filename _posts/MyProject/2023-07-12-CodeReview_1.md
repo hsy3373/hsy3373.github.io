@@ -136,6 +136,7 @@ last_modified_at: 2023-07-13
   2. 프론트 : 오픈 api 사용 구체화
   3. 서버 : 서버상 코드 소스 폴더 저장 및 불러오기 기능 구체화
   4. Github Organization 생성 : 팀명 [CodeWithReview]
+  5. 기술 스택 변경 : NextJs -> React
 
 - **할당된 업무**
 
