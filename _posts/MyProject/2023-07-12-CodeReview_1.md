@@ -23,7 +23,7 @@ last_modified_at: 2023-07-13
 반응형 웹페이지와 AWS를 통한 배포까지를 목표로 함
 
 - <a href="https://docs.google.com/spreadsheets/d/1AVsYmQw9CeW6j1WlSwJGeKoM9TVOWVCt3fK4NPtPZIA/edit#gid=1464759547" target="_blank">기획서(바로가기)</a>
-- 사용 기술 스택 : Spring, MySql, React, Nextjs
+- 사용 기술 스택 : Spring, MySql, React, tailwind css, vite
 - 팀원 : 이상민, 한승은
 
 <br>
