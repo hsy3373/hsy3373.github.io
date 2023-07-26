@@ -23,9 +23,7 @@ last_modified_at: 2023-07-26
 
 > ### 1. Array
 
-- 메모리(RAM)에 값을 기록하기 위한 공간
-- 변수 사용시 가독성이 좋아지며 재사용성 증가로 인한 코드량 감소  
-  -> 유지보수가 용이하다
+- <a href="https://hsy3373.github.io/javagrammar/4_array/" target="_blank">Java 문법 4. Array(배열)</a>
 
   <br>
 
